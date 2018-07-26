@@ -49,11 +49,23 @@ cart.addItem(cartItems[0],cartItems[1]);
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
-function updateCounter() {}
+function updateCounter() {
+  var itemCount = document.getElementById('itemCount');
+  itemCount.textContent = cart.items.length;
+}
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
   // TODO: Get the item and quantity from the form
+  var cartContent = document.getElementById('cartContents');
+
+  document.getElementById('cartContents').innerHTML = ' ';
+for(var i = 0; i < cart.items.length; i++) {
+  var liDataEl = document.createElement('li');
+  liDataEl.textContent = 'Name: ' + cart.items[i].product + ' Quantity: ' + cart.items[i].quantity;
+  // cart.items[i].product,cart.items[i].quantity;
+  cartContent.appendChild(liDataEl);
+}
   // TODO: Add a new element to the cartContents div with that information
 }
 
