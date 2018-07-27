@@ -58,7 +58,8 @@ function updateCounter() {
 function updateCartPreview() {
   // TODO: Get the item and quantity from the form
   var cartContent = document.getElementById('cartContents');
-
+  
+  // TODO: Add a new element to the cartContents div with that information
   document.getElementById('cartContents').innerHTML = ' ';
 for(var i = 0; i < cart.items.length; i++) {
   var liDataEl = document.createElement('li');
@@ -66,7 +67,6 @@ for(var i = 0; i < cart.items.length; i++) {
   // cart.items[i].product,cart.items[i].quantity;
   cartContent.appendChild(liDataEl);
 }
-  // TODO: Add a new element to the cartContents div with that information
 }
 
 // Set up the "submit" event listener on the form.
